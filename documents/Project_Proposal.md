@@ -100,9 +100,3 @@ Our first challenge is to develop a working template in a reasonable time, this 
 
 The biggest risk we have is developing and deploying a site that is not in working order, If it is not correctly tested and something goes wrong, it not only reflects poorly upon us but also the business we worked for, things like a page not working or CSS not being tested on all platforms (like safari and Firefox)  can completely ruin a site.   To avoid these mistakes, we will make sure to create a solid structure and plan for what needs to be expected from the site before we go into development.  We will also make sure to have frequent and clear communication with the clients in order to ensure we are meeting the expectations that they have for their website, and they are happy with the project before it’s theoretically too late to go back.
 
-
-6
-
-|||
-| :- | :-: |
-
