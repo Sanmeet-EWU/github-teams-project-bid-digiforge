@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion Architect | Coming Soon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .container2{
+      display:flex;
+      justify-content: space-evenly;
+      gap: 1rem;
+      background:#C4F7A1;
+      border-radius: 1rem;
+      filter: drop-shadow(-8px 4px 8px #000);
+    }
+    p{
+      padding:.5rem;
+    }
+
+    .slider {
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .arrow.prev {
+      left: 10px;
+    }
+    .arrow.next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Fusion Architect: Redefining Spaces, Building Relationships</h1>
+  <p><em>COMING SOON: The New Website for Foundation Fusion Architecture</em></p>
+  <p>Welcome to Fusion Architect, your trusted partner in commercial and residential design services across the Pacific Northwest. Based in the heart of Spokane, Washington, we specialize in crafting spaces that blend innovation with functionality, creativity with practicality.</p>
+  <div class = "container2">
+    <div>
+      <h2>About Us</h2>
+      <p>With over a decade of experience serving communities in Washington, Idaho, Montana, and Oregon, Fusion Architecture is more than just a design firm. We're collaborators, visionaries, and builders of relationships as solid as the structures we create. Founded out of a passion for comprehensive construction processes, we pride ourselves on working hand-in-hand with clients, contractors, and builders to ensure every project exceeds expectations.</p>
+    </div>
+    <div>
+      <h2>Our Mission</h2>
+      <p>At Fusion Architecture, our mission is simple yet profound: to deliver unparalleled design excellence while fostering enduring connections within our industry and community. Drawing from our background in nationally recognized firms and extensive field experience on multimillion-dollar projects, we bring a blend of expertise and dedication to every endeavor. We believe in not just designing spaces, but crafting legacies that leave a positive impact on the places we call home.</p>
+    </div>
+  </div>
+  <div class="contact">
+    <h2>Stay Tuned</h2>
+    <p>Excited to explore our portfolio and learn more about how Fusion Architecture can transform your vision into reality? Our new website is on the way, promising an immersive experience where inspiration meets innovation. Watch this space for updates and announcements as we prepare to launch our platform and showcase the fusion of creativity and craftsmanship that defines us.</p>
+    <p>In the meantime, feel free to reach out to us directly with any inquiries or project collaborations. We're here to listen, to inspire, and to build something extraordinary together.</p>
+  </div>
+  <div class="social">
+    <p>Follow us on social media:</p>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+  </div>
+</div>
+<script>
+  // Update time and day in the navbar
+  function updateTime() {
+    const now = new Date();
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const day = days[now.getDay()];
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let period = "AM";
+
+    if (hour > 12) {
+      hour -= 12;
+      period = "PM";
+    }
+
+    minute = minute < 10 ? "0" + minute : minute;
+
+    document.getElementById("time").innerHTML = `${day}, ${hour}:${minute} ${period}`;
+  }
+
+  updateTime();
+  setInterval(updateTime, 60000); // Update time every minute
+
+  // Slider functionality
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function showSlides() {
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+    });
+
+    slideIndex++;
+
+    if (slideIndex > totalSlides) {
+      slideIndex = 1;
+    }
+
+    if (slideIndex < 1) {
+      slideIndex = totalSlides;
+    }
+
+    slides[slideIndex - 1].style.display = 'block';
+  }
+
+  showSlides();
+
+  setInterval(() => {
+    showSlides();
+  }, 3000);
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    slideIndex -= 2;
+    showSlides();
+  });
+
+  document.querySelector('.next').addEventListener('click', () => {
+    showSlides();
+  });
+</script>
+</body>
+</html>
