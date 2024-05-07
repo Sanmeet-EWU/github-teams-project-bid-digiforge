@@ -3,40 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fusion Architect | Coming Soon</title>
+  <title>Fusion Architecture | Coming Soon</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
+      background-image: url(images/temp1.jpeg);
+      background-size: cover; /* Ensure the background image covers the entire viewport */
+      background-position: center; /* Center the background image */
+      color: #222;
+      scroll-behavior: smooth;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* Reduced opacity for the overlay */
     }
     .container {
       max-width: 800px;
       margin: 50px auto;
       padding: 0 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
-    .container2{
-      display:flex;
+    .container2 {
+      display: flex;
       justify-content: space-evenly;
       gap: 1rem;
-      background:#C4F7A1;
+      background: rgba(255, 255, 255, 0.7); /* Slightly opaque white background */
       border-radius: 1rem;
-      filter: drop-shadow(-8px 4px 8px #000);
+      padding: 20px;
     }
-    p{
-      padding:.5rem;
+    p {
+      padding: .5rem;
+    }
+    .social a {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 8px 12px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .social a:hover {
+      background-color: #555;
     }
   </style>
 </head>
 <body>
+<div class="overlay"></div>
 <div class="container">
-  <h1>Fusion Architect: Redefining Spaces, Building Relationships</h1>
-  <p><em>COMING SOON: The New Website for Foundation Fusion Architecture</em></p>
-  <p>Welcome to Fusion Architect, your trusted partner in commercial and residential design services across the Pacific Northwest. Based in the heart of Spokane, Washington, we specialize in crafting spaces that blend innovation with functionality, creativity with practicality.</p>
-  <div class = "container2">
+  <h1>Fusion Architecture: Redefining Spaces, Building Relationships</h1>
+  <p><em>COMING SOON: The New Website for Fusion Architecture</em></p>
+  <p>Welcome to Fusion Architecture, your trusted partner in commercial and residential design services across the Pacific Northwest. Based in the heart of Spokane, Washington, we specialize in crafting spaces that blend innovation with functionality, creativity with practicality.</p>
+  <div class="container2">
     <div>
       <h2>About Us</h2>
       <p>With over a decade of experience serving communities in Washington, Idaho, Montana, and Oregon, Fusion Architecture is more than just a design firm. We're collaborators, visionaries, and builders of relationships as solid as the structures we create. Founded out of a passion for comprehensive construction processes, we pride ourselves on working hand-in-hand with clients, contractors, and builders to ensure every project exceeds expectations.</p>
