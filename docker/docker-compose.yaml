@@ -2,8 +2,8 @@ version: '3'
 
 services:
   db:
+    image: mariadb:latest  # Use the MariaDB image
     platform: linux/x86_64
-    image: mysql:5.7
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -16,8 +16,8 @@ services:
   wordpress:
     depends_on:
       - db
-    platform: linux/x86_64
     image: wordpress:latest
+    platform: linux/x86_64
     ports:
       - "8000:80"
     restart: always
