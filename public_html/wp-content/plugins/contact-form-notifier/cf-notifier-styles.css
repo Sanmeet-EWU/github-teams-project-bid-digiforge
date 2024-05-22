@@ -3,18 +3,18 @@
 /* Chat box styles */
 .cf_notifier_chatbox {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 0;
+    right: 0;
     z-index: 1000;
     width: 320px;
     max-width: calc(100% - 40px); /* Max width of 320px and padding of 20px */
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(100%);
     transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(100%);
 }
 
 .cf_notifier_chatbox.open {
@@ -34,7 +34,7 @@
 /* Form styles */
 .cf_notifier_form input,
 .cf_notifier_form select {
-    width: 100%;
+    width: calc(100% - 20px);
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -43,6 +43,7 @@
 }
 
 .cf_notifier_form input[type="submit"] {
+    width: 100%;
     background-color: #007bff;
     color: #fff;
     border: none;
