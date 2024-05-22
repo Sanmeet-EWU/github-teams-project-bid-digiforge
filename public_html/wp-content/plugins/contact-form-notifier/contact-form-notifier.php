@@ -3,7 +3,7 @@
 Plugin Name: Contact Form Notifier
 Description: Notifies users to fill out a contact form after a specified time.
 Version: 1.0
-Author: Your Name
+Author: Kaimana Kahalekai
 */
 
 // Register activation and deactivation hooks
@@ -128,7 +128,7 @@ function cf_notifier_contact_form_shortcode() {
     } else {
         ob_start();
         ?>
-        <div class="cf_notifier_chatbox">
+        <div class="cf_notifier_chatbox" id="cf-notifier-chatbox">
             <div class="cf_notifier_message">
                 <p>Hello! How can we assist you today?</p>
             </div>
@@ -145,6 +145,13 @@ function cf_notifier_contact_form_shortcode() {
                 </form>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(function() {
+                    document.getElementById('cf-notifier-chatbox').classList.add('open');
+                }, 300000); // 300000 ms = 5 minutes
+            });
+        </script>
         <?php
         return ob_get_clean();
     }
@@ -172,7 +179,7 @@ function cf_notifier_create_db() {
 }
 
 // Enqueue styles
-add_action('admin_enqueue_scripts', 'cf_notifier_enqueue_styles');
+add_action('wp_enqueue_scripts', 'cf_notifier_enqueue_styles');
 function cf_notifier_enqueue_styles() {
     wp_enqueue_style('cf-notifier-styles', plugin_dir_url(__FILE__) . 'cf-notifier-styles.css');
 }
