@@ -3,6 +3,7 @@
 Plugin Name: Contact Form Notifier
 Description: Notifies users to fill out a contact form after a specified time.
 Version: 1.0
+Author: Your Name
 */
 
 // Register activation and deactivation hooks
@@ -62,45 +63,40 @@ function cf_notifier_add_admin_menu() {
 }
 
 function cf_notifier_options_page() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'cf_notifier_submissions';
+
+    $submissions = $wpdb->get_results("SELECT * FROM $table_name");
+
     ?>
     <div class="wrap">
         <h1>Contact Form Notifier Settings</h1>
-        <form method="post" action="options.php">
-            <?php
-            settings_fields('cf_notifier_settings_group');
-            do_settings_sections('cf-notifier');
-            submit_button();
-            ?>
-        </form>
+        <h2>Submissions</h2>
+        <table class="wp-list-table widefat striped cf-notifier-submission-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>User Type</th>
+                    <th>Notification Time</th>
+                    <th>Notify After (minutes)</th>
+                    <th>Notified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($submissions as $submission) : ?>
+                    <tr>
+                        <td><?php echo $submission->name; ?></td>
+                        <td><?php echo $submission->email; ?></td>
+                        <td><?php echo $submission->user_type; ?></td>
+                        <td><?php echo $submission->notification_time; ?></td>
+                        <td><?php echo $submission->notify_after; ?></td>
+                        <td><?php echo $submission->notified ? 'Yes' : 'No'; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
-    <?php
-}
-
-// Register settings
-add_action('admin_init', 'cf_notifier_settings_init');
-function cf_notifier_settings_init() {
-    register_setting('cf_notifier_settings_group', 'cf_notifier_settings');
-
-    add_settings_section(
-        'cf_notifier_settings_section',
-        __('Notification Settings', 'cf-notifier'),
-        null,
-        'cf-notifier'
-    );
-
-    add_settings_field(
-        'cf_notifier_delay',
-        __('Notification Delay (minutes)', 'cf-notifier'),
-        'cf_notifier_delay_render',
-        'cf-notifier',
-        'cf_notifier_settings_section'
-    );
-}
-
-function cf_notifier_delay_render() {
-    $options = get_option('cf_notifier_settings');
-    ?>
-    <input type="number" name="cf_notifier_settings[cf_notifier_delay]" value="<?php echo isset($options['cf_notifier_delay']) ? $options['cf_notifier_delay'] : '5'; ?>" min="1" max="5" />
     <?php
 }
 
@@ -128,25 +124,27 @@ function cf_notifier_contact_form_shortcode() {
             ]
         );
 
-        echo '<p>Thank you for your submission. We will notify you shortly.</p>';
+        echo '<p class="cf_notifier_success_message">Thank you for your submission. We will notify you shortly.</p>';
     } else {
         ob_start();
         ?>
-        <form method="post" action="">
-            <label for="name">Name:</label>
-            <input type="text" name="name" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" name="email" required>
-            <br>
-            <label for="user_type">User Type:</label>
-            <select name="user_type">
-                <option value="current_client">Current Client</option>
-                <option value="prospective_client">Prospective Client</option>
-            </select>
-            <br>
-            <input type="submit" name="cf_notifier_contact" value="Submit">
-        </form>
+        <div class="cf_notifier_chatbox">
+            <div class="cf_notifier_message">
+                <p>Hello! How can we assist you today?</p>
+            </div>
+            <div class="cf_notifier_form_container">
+                <form method="post" action="" class="cf_notifier_form">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <select name="user_type" required>
+                        <option value="">Select User Type</option>
+                        <option value="current_client">Current Client</option>
+                        <option value="prospective_client">Prospective Client</option>
+                    </select>
+                    <input type="submit" name="cf_notifier_contact" value="Submit">
+                </form>
+            </div>
+        </div>
         <?php
         return ob_get_clean();
     }
@@ -171,5 +169,11 @@ function cf_notifier_create_db() {
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
+}
+
+// Enqueue styles
+add_action('admin_enqueue_scripts', 'cf_notifier_enqueue_styles');
+function cf_notifier_enqueue_styles() {
+    wp_enqueue_style('cf-notifier-styles', plugin_dir_url(__FILE__) . 'cf-notifier-styles.css');
 }
 ?>
