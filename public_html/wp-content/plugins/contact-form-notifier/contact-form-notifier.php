@@ -25,7 +25,7 @@ function cf_notifier_deactivate() {
 add_filter('cron_schedules', 'cf_notifier_custom_cron_interval');
 function cf_notifier_custom_cron_interval($schedules) {
     $schedules['cf_notifier_interval'] = array(
-        'interval' => 300, // 5 minutes
+        'interval' => 0, // 5 minutes
         'display' => __('Every 5 Minutes')
     );
     return $schedules;
