@@ -1,12 +1,54 @@
+/* cf-notifier-styles.css */
+
+/* Chat box styles */
 .cf_notifier_chatbox {
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     right: 20px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 10px 10px 0 0;
+    z-index: 1000;
+    width: 320px;
+    max-width: calc(100% - 40px); /* Max width of 320px and padding of 20px */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s;
 }
 
-.cf
+.cf_notifier_chatbox.open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cf_notifier_message {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.cf_notifier_form_container {
+    padding: 20px;
+}
+
+/* Form styles */
+.cf_notifier_form input,
+.cf_notifier_form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.cf_notifier_form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.cf_notifier_form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
