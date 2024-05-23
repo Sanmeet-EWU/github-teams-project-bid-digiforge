@@ -55,7 +55,7 @@ function cf_notifier_contact_form_shortcode() {
 
         // Save form submission to database
         global $wpdb;
-        $wpdb->insert(
+        $result = $wpdb->insert(
             $wpdb->prefix . 'cf_notifier_submissions',
             [
                 'name' => $name,
@@ -67,7 +67,11 @@ function cf_notifier_contact_form_shortcode() {
             ]
         );
 
-        echo '<p class="cf_notifier_success_message">Thank you for your submission. We will notify you shortly.</p>';
+        if ($result) {
+            echo '<p class="cf_notifier_success_message">Thank you for your submission. We will notify you shortly.</p>';
+        } else {
+            echo '<p class="cf_notifier_error_message">There was an error with your submission. Please try again.</p>';
+        }
     } else {
         ob_start();
         ?>
