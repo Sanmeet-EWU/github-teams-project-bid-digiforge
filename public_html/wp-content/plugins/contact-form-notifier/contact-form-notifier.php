@@ -142,26 +142,26 @@ function cf_notifier_admin_page() {
         </form>
         <table class="wp-list-table widefat striped">
             <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>User Type</th>
-                    <th>Notification Time</th>
-                    <th>Notify After (minutes)</th>
-                    <th>Notified</th>
-                </tr>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>User Type</th>
+                <th>Notification Time</th>
+                <th>Notify After (minutes)</th>
+                <th>Notified</th>
+            </tr>
             </thead>
             <tbody>
-                <?php foreach ($submissions as $submission) : ?>
-                    <tr>
-                        <td><?php echo esc_html($submission->name); ?></td>
-                        <td><?php echo esc_html($submission->email); ?></td>
-                        <td><?php echo esc_html($submission->user_type); ?></td>
-                        <td><?php echo esc_html($submission->notification_time); ?></td>
-                        <td><?php echo esc_html($submission->notify_after); ?></td>
-                        <td><?php echo $submission->notified ? 'Yes' : 'No'; ?></td>
-                    </tr>
-                <?php endforeach; ?>
+            <?php foreach ($submissions as $submission) : ?>
+                <tr>
+                    <td><?php echo esc_html($submission->name); ?></td>
+                    <td><?php echo esc_html($submission->email); ?></td>
+                    <td><?php echo esc_html($submission->user_type); ?></td>
+                    <td><?php echo esc_html($submission->notification_time); ?></td>
+                    <td><?php echo esc_html($submission->notify_after); ?></td>
+                    <td><?php echo $submission->notified ? 'Yes' : 'No'; ?></td>
+                </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>
