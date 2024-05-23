@@ -34,7 +34,7 @@
 /* Form styles */
 .cf_notifier_form input,
 .cf_notifier_form select {
-    width: 100%;
+    width: calc(100% - 20px);
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -43,6 +43,7 @@
 }
 
 .cf_notifier_form input[type="submit"] {
+    width: 100%;
     background-color: #007bff;
     color: #fff;
     border: none;
