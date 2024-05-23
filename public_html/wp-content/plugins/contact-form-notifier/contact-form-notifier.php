@@ -3,7 +3,7 @@
 Plugin Name: Contact Form Notifier
 Description: Notifies users to fill out a contact form after a specified time.
 Version: 1.0
-Author: Kaimana Kahalekai
+Author:  DigiForge
 */
 
 // Register activation and deactivation hooks
@@ -149,7 +149,7 @@ function cf_notifier_contact_form_shortcode() {
             document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     document.getElementById('cf-notifier-chatbox').classList.add('open');
-                }, 300000); // 300000 ms = 5 minutes
+                }, 60000); // 60,000 ms = 5 minutes
             });
         </script>
         <?php
