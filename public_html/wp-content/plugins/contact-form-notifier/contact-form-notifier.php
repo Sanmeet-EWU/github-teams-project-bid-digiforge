@@ -44,7 +44,13 @@ function cf_notifier_create_db() {
 // Shortcode for contact form
 add_shortcode('cf_notifier_contact_form', 'cf_notifier_contact_form_shortcode');
 function cf_notifier_contact_form_shortcode() {
-    if ($_POST && isset($_POST['cf_notifier_contact'])) {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cf_notifier_contact'])) {
+        // Verify nonce
+        if (!isset($_POST['cf_notifier_nonce']) || !wp_verify_nonce($_POST['cf_notifier_nonce'], 'cf_notifier_nonce_action')) {
+            echo '<p class="cf_notifier_error_message">Nonce verification failed. Please try again.</p>';
+            return;
+        }
+
         // Handle form submission
         $name = sanitize_text_field($_POST['name']);
         $email = sanitize_email($_POST['email']);
@@ -88,6 +94,7 @@ function cf_notifier_contact_form_shortcode() {
                         <option value="current_client">Current Client</option>
                         <option value="prospective_client">Prospective Client</option>
                     </select>
+                    <?php wp_nonce_field('cf_notifier_nonce_action', 'cf_notifier_nonce'); ?>
                     <input type="submit" name="cf_notifier_contact" value="Submit">
                 </form>
             </div>
