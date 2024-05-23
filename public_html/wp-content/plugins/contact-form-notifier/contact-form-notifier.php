@@ -86,7 +86,7 @@ function cf_notifier_contact_form_shortcode() {
                 <p>Hello! How can we assist you today?</p>
             </div>
             <div class="cf_notifier_form_container">
-                <form method="post" action="" class="cf_notifier_form">
+                <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="cf_notifier_form">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <select name="user_type" required>
