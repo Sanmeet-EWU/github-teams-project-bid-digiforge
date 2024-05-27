@@ -1,0 +1,38 @@
+graph TD
+    subgraph Client Side
+        style Browser fill:#f9f,stroke:#333,stroke-width:2px
+        Browser[Browser]
+    end
+
+    subgraph Server Side
+        style WebServer fill:#bbf,stroke:#333,stroke-width:2px
+        WebServer[Web Server]
+        style WordPress fill:#8ecae6,stroke:#333,stroke-width:2px
+        WordPress[WordPress CMS]
+        style PluginCalendar fill:#ffb703,stroke:#333,stroke-width:2px
+        PluginCalendar[Calendar Plugin]
+        style PluginNotification fill:#fb8500,stroke:#333,stroke-width:2px
+        PluginNotification[Notification Pop-up Plugin]
+        style PluginStorage fill:#023047,stroke:#fff,stroke-width:2px
+        PluginStorage[User Data Storage Plugin]
+        style NotificationService fill:#ff006e,stroke:#fff,stroke-width:2px
+        NotificationService[Email Notification Service]
+    end
+
+    subgraph Database Server
+        style MySQL fill:#48cae4,stroke:#333,stroke-width:2px
+        MySQL[MySQL Database]
+    end
+
+    Browser --> |HTTP Requests| WebServer
+    WebServer --> |Handles Requests| WordPress
+    WordPress --> |Uses| PluginCalendar
+    WordPress --> |Uses| PluginNotification
+    WordPress --> |Uses| PluginStorage
+    PluginCalendar --> |Stores Data| MySQL
+    PluginNotification --> |Stores Data| MySQL
+    PluginStorage --> |Stores Data| MySQL
+    MySQL --> |Data| NotificationService
+    NotificationService --> |Sends Email| Admin[Admin]
+    NotificationService --> |Sends Email| User[User]
+    PluginCalendar --> |Manage Appointments| Browser
