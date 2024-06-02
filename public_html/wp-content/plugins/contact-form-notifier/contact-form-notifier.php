@@ -86,8 +86,8 @@ function cf_notifier_contact_form_shortcode() {
                 <p>Hello! How can we assist you today?</p>
             </div>
             <div class="cf_notifier_buttons">
-                <button id="cf-notifier-minimize-btn">Minimize</button>
-                <button id="cf-notifier-close-btn">Close</button>
+                <button id="cf-notifier-minimize-btn">-</button>
+                <button id="cf-notifier-close-btn">×</button>
             </div>
             <div class="cf_notifier_form_container">
                 <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="cf_notifier_form">
