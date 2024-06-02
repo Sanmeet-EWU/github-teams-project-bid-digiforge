@@ -85,6 +85,10 @@ function cf_notifier_contact_form_shortcode() {
             <div class="cf_notifier_message">
                 <p>Hello! How can we assist you today?</p>
             </div>
+            <div class="cf_notifier_buttons">
+                <button id="cf-notifier-minimize-btn">Minimize</button>
+                <button id="cf-notifier-close-btn">Close</button>
+            </div>
             <div class="cf_notifier_form_container">
                 <form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="cf_notifier_form">
                     <input type="text" name="name" placeholder="Name" required>
@@ -101,10 +105,22 @@ function cf_notifier_contact_form_shortcode() {
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                var chatbox = document.getElementById('cf-notifier-chatbox');
+                var minimizeBtn = document.getElementById('cf-notifier-minimize-btn');
+                var closeBtn = document.getElementById('cf-notifier-close-btn');
+
+                minimizeBtn.addEventListener('click', function() {
+                    chatbox.classList.toggle('minimized');
+                });
+
+                closeBtn.addEventListener('click', function() {
+                    chatbox.classList.add('closed');
+                });
+
                 var debugMode = <?php echo get_option('cf_notifier_debug_mode') ? 'true' : 'false'; ?>;
                 var delay = debugMode ? 10000 : 180000; // 10 seconds for debug, 3 minutes for normal
                 setTimeout(function() {
-                    document.getElementById('cf-notifier-chatbox').classList.add('open');
+                    chatbox.classList.add('open');
                 }, delay);
             });
         </script>

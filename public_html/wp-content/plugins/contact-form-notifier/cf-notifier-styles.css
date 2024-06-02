@@ -53,3 +53,17 @@
 .cf_notifier_form input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+.cf_notifier_buttons {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.cf_notifier_buttons button {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.cf_notifier_chatbox.minimized .cf_notifier_form_container {
+    display: none;
+}
