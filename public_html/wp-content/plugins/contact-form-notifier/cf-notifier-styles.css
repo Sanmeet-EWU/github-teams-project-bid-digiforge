@@ -1,5 +1,3 @@
-/* cf-notifier-styles.css */
-
 /* Chat box styles */
 .cf_notifier_chatbox {
     position: fixed;
@@ -54,18 +52,23 @@
     background-color: #0056b3;
 }
 
-.cf_notifier_notification button#cf-notifier-close-btn {
+.cf_notifier_notification button {
     font-size: 18px;
     line-height: 1;
     padding: 5px;
+    background: none;
+    border: none;
     color: #666;
+    cursor: pointer;
 }
 
-/* Minimize button */
-.cf_notifier_notification button#cf-notifier-minimize-btn {
-    font-size: 18px;
-    line-height: 1;
-    padding: 5px;
-    color: #666;
+.cf_notifier_notification button:hover {
+    color: #000;
 }
 
+/* Additional styles for minimized state */
+.cf_notifier_chatbox.minimized {
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}

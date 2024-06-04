@@ -104,24 +104,17 @@ function cf_notifier_contact_form_shortcode() {
             </div>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var chatbox = document.getElementById('cf-notifier-chatbox');
-                var minimizeBtn = document.getElementById('cf-notifier-minimize-btn');
-                var closeBtn = document.getElementById('cf-notifier-close-btn');
+            document.getElementById('cf-notifier-close-btn').addEventListener('click', function() {
+                document.getElementById('cf-notifier').style.display = 'none';
+            });
 
-                minimizeBtn.addEventListener('click', function() {
-                    chatbox.classList.toggle('minimized');
-                });
-
-                closeBtn.addEventListener('click', function() {
-                    chatbox.classList.add('closed');
-                });
-
-                var debugMode = <?php echo get_option('cf_notifier_debug_mode') ? 'true' : 'false'; ?>;
-                var delay = debugMode ? 10000 : 180000; // 10 seconds for debug, 3 minutes for normal
-                setTimeout(function() {
-                    chatbox.classList.add('open');
-                }, delay);
+            document.getElementById('cf-notifier-minimize-btn').addEventListener('click', function() {
+                var chatbox = document.getElementById('cf-notifier');
+                if (chatbox.classList.contains('minimized')) {
+                    chatbox.classList.remove('minimized');
+                } else {
+                    chatbox.classList.add('minimized');
+                }
             });
         </script>
         <?php
