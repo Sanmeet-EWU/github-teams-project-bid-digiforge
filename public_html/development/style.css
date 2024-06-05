@@ -1,0 +1,724 @@
+.frame {
+    background-color: #fffdf5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.frame .div {
+    background-color: #fffdf5;
+    overflow: hidden;
+    width: 1900px;
+    height: 7523px;
+    position: relative;
+}
+
+.frame .call-to-action {
+    position: absolute;
+    width: 1902px;
+    height: 834px;
+    top: 0;
+    left: 0;
+}
+
+.frame .overlap {
+    position: relative;
+    width: 1900px;
+    height: 834px;
+    background-image: url(./img/rectangle-27.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.frame .overlap-group {
+    position: absolute;
+    width: 597px;
+    height: 377px;
+    top: 128px;
+    left: 181px;
+}
+
+.frame .rectangle {
+    position: absolute;
+    width: 597px;
+    height: 162px;
+    top: 215px;
+    left: 0;
+    background-color: #fffdf503;
+    border-radius: 50px;
+    backdrop-filter: blur(3px) brightness(100%);
+    -webkit-backdrop-filter: blur(3px) brightness(100%);
+}
+
+.frame .text-wrapper {
+    position: absolute;
+    width: 539px;
+    top: 244px;
+    left: 33px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #fffdf5;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .fusion-architecture {
+    position: absolute;
+    width: 569px;
+    height: 289px;
+    top: 0;
+    left: 18px;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+}
+
+.frame .special-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 244px;
+    height: 82px;
+    top: 505px;
+    left: 214px;
+}
+
+.frame .overlap-group-2 {
+    position: relative;
+    width: 242px;
+    height: 82px;
+    border-radius: 25px;
+}
+
+.frame .group {
+    position: absolute;
+    width: 242px;
+    height: 82px;
+    top: 0;
+    left: 0;
+    background-color: #373a3678;
+    border-radius: 25px;
+    border: 4px solid;
+    border-color: #373a36;
+}
+
+.frame .rectangle-2 {
+    position: relative;
+    height: 82px;
+    top: -4px;
+    left: -4px;
+    border-radius: 25px;
+    border: 4px solid;
+    border-color: #f3a560;
+}
+
+.frame .text-wrapper-2 {
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    font-family: "Roboto-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #f3a560;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.frame .overlap-wrapper {
+    position: absolute;
+    width: 1358px;
+    height: 677px;
+    top: 2119px;
+    left: 246px;
+}
+
+.frame .overlap-2 {
+    position: relative;
+    height: 677px;
+}
+
+.frame .images {
+    position: absolute;
+    width: 1358px;
+    height: 677px;
+    top: 0;
+    left: 0;
+}
+
+.frame .overlap-group-3 {
+    position: relative;
+    width: 1368px;
+    height: 687px;
+    top: -10px;
+}
+
+.frame .rlmillerphoto-och {
+    width: 1230px;
+    height: 606px;
+    top: 0;
+    left: 138px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.frame .img {
+    position: absolute;
+    width: 686px;
+    height: 463px;
+    top: 224px;
+    left: 0;
+}
+
+.frame .group-2 {
+    position: absolute;
+    width: 173px;
+    height: 47px;
+    top: 605px;
+    left: 713px;
+}
+
+.frame .vector {
+    position: absolute;
+    width: 26px;
+    height: 22px;
+    top: 18px;
+    left: 147px;
+}
+
+.frame .text {
+    position: absolute;
+    width: 140px;
+    height: 47px;
+    top: 0;
+    left: 0;
+}
+
+.frame .text-wrapper-3 {
+    position: absolute;
+    width: 138px;
+    top: 0;
+    left: 0;
+    font-family: "Roboto-Light", Helvetica;
+    font-weight: 300;
+    color: #373a36;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.frame .line {
+    position: absolute;
+    width: 138px;
+    height: 1px;
+    top: 46px;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .overlap-group-wrapper {
+    position: absolute;
+    width: 1358px;
+    height: 677px;
+    top: 4126px;
+    left: 265px;
+}
+
+.frame .marina-court {
+    position: absolute;
+    width: 1390px;
+    height: 775px;
+    top: 1089px;
+    left: 255px;
+}
+
+.frame .overlap-3 {
+    position: relative;
+    height: 775px;
+}
+
+.frame .div-wrapper {
+    position: absolute;
+    width: 1390px;
+    height: 775px;
+    top: 0;
+    left: 0;
+}
+
+.frame .overlap-group-4 {
+    position: relative;
+    width: 1400px;
+    height: 795px;
+    top: -10px;
+}
+
+.frame .MG {
+    position: absolute;
+    width: 404px;
+    height: 514px;
+    top: 281px;
+    left: 156px;
+}
+
+.frame .copy-of-MG {
+    position: absolute;
+    width: 614px;
+    height: 372px;
+    top: 0;
+    left: 786px;
+    object-fit: cover;
+}
+
+.frame .MG-2 {
+    width: 1231px;
+    height: 557px;
+    top: 86px;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+.frame .text-2 {
+    position: absolute;
+    width: 437px;
+    height: 47px;
+    top: 10px;
+    left: 10px;
+}
+
+.frame .vector-2 {
+    position: absolute;
+    width: 36px;
+    height: 22px;
+    top: 18px;
+    left: 400px;
+}
+
+.frame .text-wrapper-4 {
+    position: absolute;
+    width: 388px;
+    top: 0;
+    left: 0;
+    font-family: "Roboto-Light", Helvetica;
+    font-weight: 300;
+    color: #373a36;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.frame .line-2 {
+    position: absolute;
+    width: 388px;
+    height: 1px;
+    top: 46px;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .marina-court-2 {
+    position: absolute;
+    width: 1390px;
+    height: 775px;
+    top: 5058px;
+    left: 255px;
+}
+
+.frame .picture-with-text {
+    position: absolute;
+    width: 1900px;
+    height: 814px;
+    top: 3051px;
+    left: 0;
+    background-image: url(./img/rlmillerphoto-och-37-1.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.frame .the-text {
+    width: 707px;
+    height: 814px;
+}
+
+.frame .overlap-group-5 {
+    position: relative;
+    width: 703px;
+    height: 814px;
+    background-image: url(./img/rectangle-31.svg);
+    background-size: 100% 100%;
+}
+
+.frame .text-wrapper-5 {
+    position: absolute;
+    width: 341px;
+    top: 304px;
+    left: 84px;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #fffdf5;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.frame .lorem-ipsum-dolor {
+    position: absolute;
+    width: 553px;
+    top: 375px;
+    left: 84px;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #fffdf5;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .overlap-4 {
+    position: absolute;
+    width: 1900px;
+    height: 439px;
+    top: 7084px;
+    left: -2px;
+    background-color: #d9d9d9;
+}
+
+.frame .text-wrapper-6 {
+    position: absolute;
+    width: 1123px;
+    top: 106px;
+    left: 279px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 100px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .other-projects {
+    position: absolute;
+    width: 1613px;
+    height: 741px;
+    top: 6088px;
+    left: 143px;
+}
+
+.frame .overlap-5 {
+    position: relative;
+    width: 1615px;
+    height: 742px;
+}
+
+.frame .atlas-gas-station {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 188px;
+    left: 23px;
+    transform: rotate(-6.39deg);
+}
+
+.frame .overlap-group-6 {
+    position: relative;
+    width: 470px;
+    height: 465px;
+    top: -30px;
+    left: -23px;
+}
+
+.frame .rectangle-3 {
+    position: absolute;
+    width: 424px;
+    height: 435px;
+    top: 30px;
+    left: 23px;
+    background-color: #ffffff;
+    box-shadow: -6px 8px 11px 4px #0000001a;
+}
+
+.frame .rlmillerphoto {
+    position: absolute;
+    width: 432px;
+    height: 366px;
+    top: 23px;
+    left: 19px;
+    transform: rotate(6.39deg);
+    object-fit: cover;
+}
+
+.frame .text-wrapper-7 {
+    position: absolute;
+    width: 398px;
+    top: 396px;
+    left: 36px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .coffman {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 268px;
+    left: 386px;
+    transform: rotate(1.92deg);
+}
+
+.frame .overlap-6 {
+    position: relative;
+    width: 424px;
+    height: 435px;
+    background-color: #ffffff;
+    box-shadow: -6px 8px 11px 4px #0000001a;
+}
+
+.frame .text-wrapper-8 {
+    position: absolute;
+    width: 398px;
+    top: 366px;
+    left: 13px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .rlmillerphoto-och-2 {
+    width: 412px;
+    height: 337px;
+    top: 10px;
+    left: 6px;
+    transform: rotate(-1.92deg);
+    position: absolute;
+    object-fit: cover;
+}
+
+.frame .lake-CDA-cabin {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 146px;
+    left: 648px;
+    transform: rotate(-3.1deg);
+}
+
+.frame .overlap-7 {
+    position: relative;
+    width: 435px;
+    height: 441px;
+    top: -6px;
+    left: -7px;
+}
+
+.frame .rectangle-4 {
+    top: 6px;
+    left: 7px;
+    position: absolute;
+    width: 424px;
+    height: 435px;
+    background-color: #ffffff;
+    box-shadow: -6px 8px 11px 4px #0000001a;
+}
+
+.frame .text-wrapper-9 {
+    position: absolute;
+    width: 398px;
+    top: 372px;
+    left: 20px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .a {
+    position: absolute;
+    width: 417px;
+    height: 346px;
+    top: 11px;
+    left: 9px;
+    transform: rotate(3.1deg);
+    object-fit: cover;
+}
+
+.frame .lumber-beard {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 293px;
+    left: 922px;
+    transform: rotate(3.68deg);
+}
+
+.frame .overlap-8 {
+    position: relative;
+    width: 442px;
+    height: 445px;
+    top: -10px;
+    left: -10px;
+}
+
+.frame .rectangle-5 {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    width: 424px;
+    height: 435px;
+    background-color: #ffffff;
+    box-shadow: -6px 8px 11px 4px #0000001a;
+}
+
+.frame .text-wrapper-10 {
+    position: absolute;
+    width: 398px;
+    top: 376px;
+    left: 23px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .MG-3 {
+    position: absolute;
+    width: 420px;
+    height: 350px;
+    top: 13px;
+    left: 11px;
+    transform: rotate(-3.68deg);
+    object-fit: cover;
+}
+
+.frame .chattaroy {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 59px;
+    left: 271px;
+    transform: rotate(4.81deg);
+}
+
+.frame .overlap-9 {
+    position: relative;
+    width: 450px;
+    height: 453px;
+    top: -18px;
+    left: -13px;
+}
+
+.frame .rectangle-6 {
+    top: 18px;
+    left: 13px;
+    position: absolute;
+    width: 424px;
+    height: 435px;
+    background-color: #ffffff;
+    box-shadow: -6px 8px 11px 4px #0000001a;
+}
+
+.frame .text-wrapper-11 {
+    position: absolute;
+    width: 398px;
+    top: 384px;
+    left: 26px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .MG-4 {
+    position: absolute;
+    width: 422px;
+    height: 355px;
+    top: 17px;
+    left: 14px;
+    transform: rotate(-4.81deg);
+    object-fit: cover;
+}
+
+.frame .ponderosa {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 161px;
+    left: 1189px;
+}
+
+.frame .element-mica {
+    position: absolute;
+    width: 397px;
+    height: 325px;
+    top: 16px;
+    left: 13px;
+    object-fit: cover;
+}
+
+.frame .marina-court-3 {
+    position: absolute;
+    width: 426px;
+    height: 435px;
+    top: 19px;
+    left: 858px;
+    transform: rotate(-5.36deg);
+}
+
+.frame .overlap-10 {
+    position: relative;
+    width: 457px;
+    height: 456px;
+    top: -21px;
+    left: -17px;
+}
+
+.frame .rectangle-7 {
+    top: 21px;
+    left: 17px;
+    position: absolute;
+    width: 424px;
+    height: 435px;
+    background-color: #ffffff;
+    box-shadow: -6px 8px 11px 4px #0000001a;
+}
+
+.frame .text-wrapper-12 {
+    position: absolute;
+    width: 398px;
+    top: 387px;
+    left: 30px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .MG-5 {
+    width: 426px;
+    height: 361px;
+    top: 19px;
+    left: 16px;
+    transform: rotate(5.36deg);
+    position: absolute;
+    object-fit: cover;
+}
