@@ -33,3 +33,4 @@ Our client, an architecture firm, seeks a website to showcase their portfolio an
 #### Problem Statement: Regularly forgetting to care for your plants or not knowing how to care for them to begin with.
 
 Addressing the common challenges of forgetting to care for plants or lacking knowledge about plant care, this project aims to develop a mobile or web application serving as a central platform for plant care and scheduling. Users will have access to comprehensive care information for various house plants and can create customized profiles based on predefined templates. The application will enable users to set up watering and repotting schedules for each plant profile, with integration capabilities with calendar apps for seamless management.
+
