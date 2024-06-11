@@ -29,8 +29,9 @@
 Welcome to DigiForge! This manual is designed to help you get started with our project, a redesigned website for a local architecture firm in Spokane, WA. The following sections will guide you through the setup and usage of the provided virtual machine (VM), which hosts the website.
 
 ## Project Scope
-The project's scope includes the following requirements:
-(<span style="color:red">Red not complete</span>,<span style="color:yellow">yellow in progress</span>,<span style="color:green">green complete</span>)
+The project's scope includes the following requirements: 
+
+(*Can't see on github*) (<span style="color:red">Red not complete</span>,<span style="color:yellow">yellow in progress</span>,<span style="color:green">green complete</span>)
 
 - <span style="color:yellow">Time-based contact inquiry form</span>
 - <span style="color:green">Connected to a database that records responses from the contact form</span>
@@ -42,7 +43,7 @@ The project's scope includes the following requirements:
 
 ### Prerequisites
 - A virtualization software (such as VirtualBox or VMware) installed on your computer.
-- The provided .ova file of the VM.
+- The provided .ova file of the VM (in Google Drive).
 
 ### Installing the VM
 1. **Download the .ova file:** Obtain the provided .ova file for the DigiForge VM.
